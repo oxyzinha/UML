@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Escolha do Livro</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Vem escolher o livro conosco!</h2>
+        <form id="bookSelectionForm">
+            <label for="bookId">ID do Livro:</label>
+            <input type="text" id="bookId" name="bookId" required>
+
+            <label for="bookTitle">Título do Livro:</label>
+            <input type="text" id="bookTitle" name="bookTitle" required>
+
+            <label for="requestDate">Data de Requisição:</label>
+            <input type="date" id="requestDate" name="requestDate" required>
+
+            <label for="returnDate">Data de Devolução:</label>
+            <input type="date" id="returnDate" name="returnDate" required>
+
+            <button type="button" onclick="submitBookSelection()">Continuar</button>
+        </form>
+    </div>
+
+    <script src="bookScript.js"></script>
+</body>
+</html>

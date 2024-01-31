@@ -3,9 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <title>Página de Login</title>
 </head>
 <body>
-    <a href="https://lucid.app/lucidchart/623e6c62-b24b-49da-8b85-c6a6a71a0fb6/edit?viewport_loc=-4981%2C6704%2C37477%2C17795%2C0_0&invitationId=inv_c24cd689-747c-430e-9fbc-568c1e1ce44c"> UML </a>
+    <nav>
+        <!-- Adicione a barra de navegação se desejar -->
+        <ul>
+            <li><a href="https://lucid.app/lucidchart/623e6c62-b24b-49da-8b85-c6a6a71a0fb6/edit?viewport_loc=-4981%2C6704%2C37477%2C17795%2C0_0&invitationId=inv_c24cd689-747c-430e-9fbc-568c1e1ce44c">UML</a></li>
+
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h2>Faz o log in na biblioteca da tua escola!!</h2>
+        <form id="loginForm">
+            <label for="emailPhone">Email ou Número de Telefone:</label>
+            <input type="text" id="emailPhone" name="emailPhone" required>
+
+            <label for="firstName">Nome:</label>
+            <input type="text" id="firstName" name="firstName" required>
+
+            <label for="lastName">Sobrenome:</label>
+            <input type="text" id="lastName" name="lastName" required>
+
+            <label for="grade">Ano de Escolaridade:</label>
+            <input type="text" id="grade" name="grade" required>
+
+            <button type="button" onclick="submitForm()">Entrar</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
