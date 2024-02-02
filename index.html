@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library System</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <h1>The main requirements of a library system include:</h1>
+
+    <pre>
+    1. User management and authentication.
+    2. Catalog management for books with search functionality.
+    3. Check-out and check-in of books.
+    4. Reservation system for unavailable books.
+    5. Fine management for overdue items.
+    6. Reporting and analytics for administrative purposes.</pre>
+
+    <h1>For a library system, considering CRUD (Create, Read, Update, Delete) operations, the basic functionalities
+        should include: </h1>
+
+    <pre>
+   1. Create (C):
+    - Add Book: Allow librarians to add new books to the library system, including details such as title,
+    author, ISBN, genre, etc.
+
+    2. Read (R):
+    - View Book List: Provide users with the ability to view a list of available books, along with their
+    details.
+    - Search Books: Allow users to search for books based on criteria such as title, author, or genre.
+    - View Book Details: Provide detailed information about a specific book, including its availability status.
+
+    3. Update (U):
+    - Update Book Information: Allow librarians to modify book details, such as title, author, or availability
+    status.
+    - Mark Book as Borrowed/Returned:Update the availability status of a book when it is borrowed or returned.
+
+    4. Delete (D):
+    - Remove Book: Allow librarians to remove a book from the library system, updating the catalog accordingly.
+
+    These functionalities form the core operations required for managing the library's inventory and providing users
+    with the ability to interact with the system effectively. Implementing CRUD operations ensures that the library
+    system can handle the complete lifecycle of library resources.In the entity-relationship model for a library system, we can identify several key entities and their relationships. Here is a basic representation:
+
+    ### Entities:
+    
+    1. Book:
+       - Attributes:
+         - BookID (Primary Key)
+         - Title
+         - Author
+         - ISBN
+         - Genre
+         - AvailabilityStatus (e.g., boolean to indicate whether the book is available for borrowing)
+    
+    2. User:
+       - Attributes:
+         - UserID (Primary Key)
+         - FirstName
+         - LastName
+         - Email
+         - PhoneNumber
+    
+    3. Loan:
+       - Attributes:
+         - LoanID (Primary Key)
+         - BookID (Foreign Key referencing Book)
+         - UserID (Foreign Key referencing User)
+         - BorrowDate
+         - ReturnDate
+    
+    ### Relationships:
+    
+    1. User borrows Book (One-to-Many):
+       - A user can borrow multiple books.
+       - A book can be borrowed by multiple users.
+    
+    2. Loan associates User and Book (Many-to-One):
+       - A loan is associated with one user (borrower).
+       - A loan is associated with one book.
+    
+    ### Entity-Relationship Diagram:
+    
+    ```plaintext
+    +---------------------+        +-----------------------+        +----------------+
+    |        Book         |        |          User         |        |      Loan      |
+    +---------------------+        +-----------------------+        +----------------+
+    | BookID (PK)         |        | UserID (PK)           |        | LoanID (PK)    |
+    | Title               |        | FirstName             |        | BookID (FK)    |
+    | Author              |        | LastName              |        | UserID (FK)    |
+    | Genre               |        | Email                 |        | BorrowDate     |
+    | AvailabilityStatus  |        | PhoneNumber           |        | ReturnDate     |
+    |                     |        +-----------------------+        +----------------+
+    +---------------------+
+    
+    
+    In this diagram:
+    - PK:Primary Key
+    - FK:Foreign Key
+    
+    The relationships are represented by connecting lines between entities. Each relationship line indicates the type of relationship (One-to-Many, Many-to-One). For example, the "User borrows Book" relationship is represented by the connection between the User and Book entities.
+    
+    Attributes provide more details about each entity. For instance, a Book entity has attributes like Title, Author, ISBN, etc. The relationships and attributes help define the structure of the database and how different entities are related in the library system.</pre>
+
+
+    <!-- Google Translate API -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript"
+        src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+
+</html>

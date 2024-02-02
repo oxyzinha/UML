@@ -1,0 +1,55 @@
+
+
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 20px;
+    background-color: #f8f8f8;
+}
+
+h1, h2 {
+    border-bottom: 2px solid #333;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Preformatted Text Styles */
+pre {
+    background-color: #282c34;
+    color: #abb2bf;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    overflow: auto;
+}
+
+pre code {
+    display: block;
+    white-space: pre;
+    color: #abb2bf;
+}
+
+/* Code Styles */
+code {
+    font-family: 'Fira Code', monospace;
+    font-size: 14px;
+    background-color: #282c34;
+    color: #abb2bf;
+    padding: 4px 8px;
+    border-radius: 4px;
+    margin: 0 2px;
+}
+
+/* Translate Button Styles */
+.translate-button {
+    display: block;
+    background-color: #61dafb;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
